@@ -47,6 +47,13 @@
             border-radius: 3px;
             box-sizing: border-box;
         }
+        input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+        }
 
         button {
             background-color: #4CAF50;
@@ -106,17 +113,17 @@
                     <option value="Otro">Otro</option>
                 </select>
             </div>
-
+<tipo de entrada="oculto" nombre="_captcha" valor="falso">
+    
             <div class="form-group">
                 <label for="ocupacion">Ocupación:</label>
                 <input type="text" id="ocupacion" name="ocupacion" required>
             </div>
             <input type="hidden" name="_next" value="https://formulario-html-five.vercel.app/">
             <input type="hidden" name="_subject" value="¡Nuevo envío!">
-            <tipo de entrada="oculto" nombre="_captcha" valor="falso">
-
+            
             <button type="submit">CONTINUAR</button>
         </form>
     </div>
 </body>
-    </html>
+</html>
