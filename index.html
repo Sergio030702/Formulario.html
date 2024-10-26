@@ -3,148 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visa Canadá</title>
+    <title>Cálculo de Incendios</title>
     <style>
+        
         body {
-            font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f4f4f4;
-        }
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
 
-        .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            width: 400px;
-            text-align: center;
-        }
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
+h1 {
+    text-align: center;
+}
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #666;
-        }
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
 
-        input[type="text"],
-        input[type="tel"],
-        select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            box-sizing: border-box;
-        }
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-        
-        input[type="email"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-sizing: border-box;
-        }
-        
+button:hover {
+    background-color: #218838;
+}
 
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 100%;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
+#results {
+    margin-top: 20px;
+    display: none;
+}
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>VISA CANADÁ</h1>
-        <p>¡Aprovecha esta gran oportunidad!</p>
-        <p>Valido hasta Diciembre de 2024</p>
-        <h3>EMPLEOS EN CANADÁ 2024</h3>
-        <p>Imagina una Nueva vida en Canadá. Con una economía sólida y una baja tasa de desempleo, es el momento ideal para dar el siguiente paso.</p>
-        <p>¡Completa este formulario y aplica ahora!</p>
+        <h1>Cálculo de Propagación de Incendios</h1>
+        <form id="fireForm">
+            <label for="velocity">Velocidad lineal:</label>
+            <input type="number" id="velocity" value="2" required>
+            <select id="velocityUnit">
+                <option value="m/min">m/min</option>
+                <option value="km/h">km/h</option>
+            </select>
 
-        <form action="https://formsubmit.co/a519dfc805338dfa2ed6ddff0b9a9aa2" method="POST">
-            <div class="form-group">
-                <label for="nombre">Nombre y Apellido:</label>
-                <input type="text" id="nombre"  placeholder="Nombre y Apellido "name="nombre" required>
-            </div>
-            
-            <label for="email">Correo electrónico:</label>
-            <input type="email" name="email" placeholder="Dirección de correo electrónico">
-           <br> <br>
-            
-            <div class="form-group">
-                <label for="telefono">Número de Teléfono:</label>
-                <input type="tel" id="telefono" placeholder="Número de Teléfono" name="telefono" required>
-            </div>
+            <label for="timeOp1">Tiempo operativo para el Local I (min):</label>
+            <input type="number" id="timeOp1" value="10" required>
 
-            <div class="form-group">
-                <label for="pais">País:</label>
-                <select id="pais" name="pais" required>
-                    <option value="">Seleccionar</option>
-                    <option value="México">México</option>
-                    <option value="Colombia">Colombia</option>
-                    <option value="Argentina">Argentina</option>
-                    <option value="Venezuela">Venezuela</option>
-                    <option value="Peru">Perú</option>
-                    <option value="Cuba">Cuba</option>
-                    </select>
-            </div>
+            <label for="timeOp2">Tiempo operativo para el Local II (min):</label>
+            <input type="number" id="timeOp2" value="5" required>
 
-            <div class="form-group">
-                <label for="genero">Género:</label>
-                <select id="genero" name="genero" required>
-                    <option value="">Seleccionar</option>
-                    <option value="Masculino">Masculino</option>
-                    <option value="Femenino">Femenino</option>
-                    <option value="Otro">Otro</option>
-                </select>
-            </div>
-<input type="hidden" name="_captcha" value="false">
+            <label for="shape">Forma geométrica del incendio:</label>
+            <select id="shape">
+                <option value="semicircle">Semicircular</option>
+                <option value="rectangle">Rectángulo</option>
+                <option value="circle">Círculo</option>
+            </select>
 
-    <input type="hidden" name="_next" value="https://formulario-html-five.vercel.app/">
-     
-    
-            <div class="form-group">
-                <label for="ocupacion">Ocupación:</label>
-                <input type="text" id="ocupacion" placeholder="Ocupación" name="ocupacion" required>
-            </div>
-            <input type="hidden" name="_next" value="https://formulario-html-five.vercel.app/">
-            <input type="hidden" name="_subject" value="¡Nuevo envío!">
-            
-            <button type="submit">CONTINUAR</button>
+            <button type="submit">Calcular</button>
         </form>
-    </div> 
-    <script>
-        let url = 'https://ipinfo.io/json?token=e2ddd181e5daf5';
 
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    console.log("IP:", data.ip);
-    console.log("Ciudad:", data.city);
-    console.log("Región:", data.region);
-    console.log("País:", data.country);
+        <div id="results">
+            <h2>Resultados</h2>
+            <p id="displacement">Desplazamiento: </p>
+            <p id="timeI">Tiempo en llegar al Local I: </p>
+            <p id="timeII">Tiempo en llegar al Local II: </p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('fireForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Obtener los valores de entrada
+    const velocity = parseFloat(document.getElementById('velocity').value);
+    const timeOp1 = parseFloat(document.getElementById('timeOp1').value);
+    const timeOp2 = parseFloat(document.getElementById('timeOp2').value);
+    const shape = document.getElementById('shape').value;
+    const velocityUnit = document.getElementById('velocityUnit').value;
+
+    // Validar datos
+    if (velocity <= 0 || timeOp1 <= 0 || timeOp2 <= 0) {
+        alert("Por favor, ingresa valores positivos para todos los campos.");
+        return;
+    }
+
+    // Convertir la velocidad a m/min si es necesario
+    let velocityInMMin = velocity;
+    if (velocityUnit === 'km/h') {
+        velocityInMMin = velocity * (1000 / 60); // Convertir km/h a m/min
+    }
+
+    // Calcular el desplazamiento basado en la forma seleccionada
+    let displacement;
+    if (shape === 'semicircle') {
+        displacement = (0.5 * velocityInMMin * timeOp1) + (velocityInMMin * timeOp2);
+    } else if (shape === 'rectangle') {
+        // Suponiendo que el área del rectángulo es base * altura
+        const base = 10; // Ejemplo de base
+        const height = 5; // Ejemplo de altura
+        displacement = base * height; // Simple área
+    } else if (shape === 'circle') {
+        // Aquí podrías pedir al usuario que ingrese el radio
+        const radius = 5; // Ejemplo de radio
+        displacement = Math.PI * radius * radius; // Área del círculo
+    }
+
+    // Calcular el tiempo en llegar a los locales
+    const timeI = (displacement / velocityInMMin);
+    const timeII = (displacement / velocityInMMin);
+
+    // Mostrar los resultados
+    document.getElementById('displacement').textContent = `Desplazamiento: ${displacement.toFixed(2)} m`;
+    document.getElementById('timeI').textContent = `Tiempo en llegar al Local I: ${timeI.toFixed(2)} min`;
+    document.getElementById('timeII').textContent = `Tiempo en llegar al Local II: ${timeII.toFixed(2)} min`;
+
+    document.getElementById('results').style.display = 'block';
+});
     </script>
 </body>
 </html>
